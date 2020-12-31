@@ -561,15 +561,7 @@ b {
   fill: var(--accent-color);
 }
 /* FEATURES */
-.features,
-.team,
-.customers {
-  padding-bottom: 94px;
-  padding-top: 94px;
-}
-.about {
-  padding-bottom: 94px;
-}
+
 .features-item {
   width: 270px;
 }
@@ -598,21 +590,23 @@ b {
   line-height: 1.714;
   margin: 0;
 }
-.features .list,
-.about .list {
+.features .list {
   display: flex;
 }
 .features-item:not(:last-child) {
   margin-right: 30px;
+}
+.features-bcg-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* ABOUT, TEAM, CUSTOMERS */
 
 .about-item + .about-item {
   margin-left: 30px;
 }
-.about-title,
-.team-title,
-.customers-title {
+.about-title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -620,6 +614,9 @@ b {
   text-align: center;
   margin-top: 0;
   margin-bottom: 50px;
+}
+.about .list {
+  display: flex;
 }
 .about-item {
   position: relative;
@@ -642,7 +639,15 @@ b {
 .team {
   background-color: var(--bcg-primary-color);
 }
-
+.team-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
 .team-item {
   width: 270px;
   background-color: var(--title-color);
@@ -673,14 +678,12 @@ b {
   display: flex;
   margin-top: 10px;
 }
-.features-bcg-icon,
-.social-item > .link,
-.customer-link {
+
+.social-item > .link {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.social-item > .link {
+
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -692,6 +695,7 @@ b {
 .social-icon {
   width: 20px;
   height: 20px;
+  transition: fill 250ms var(--timing-function);
 }
 .icon {
   fill: var(--svg-color);
@@ -708,6 +712,16 @@ b {
   display: flex;
   justify-content: space-between;
 }
+
+.customers-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
 .customer-link {
   width: 170px;
   height: 90px;
@@ -716,7 +730,11 @@ b {
 
   transition: border-color 250ms var(--timing-function);
 }
-.social-icon,
+.customer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .customer-icon {
   transition: fill 250ms var(--timing-function);
 }
