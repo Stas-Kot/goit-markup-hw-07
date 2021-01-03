@@ -469,7 +469,7 @@ b {
 .form-comment:hover,
 .form-label:hover,
 .form-field:hover,
-.modal-form-policy-text:hover,
+.form-policy-text:hover,
 .form-comment:focus,
 .form-input:focus {
   cursor: pointer;
@@ -570,6 +570,9 @@ b {
   background-color: var(--bcg-primary-color);
   margin-bottom: 30px;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .features-icon {
   width: 70px;
@@ -595,11 +598,6 @@ b {
 }
 .features-item:not(:last-child) {
   margin-right: 30px;
-}
-.features-bcg-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 /* ABOUT, TEAM, CUSTOMERS */
 
@@ -728,13 +726,13 @@ b {
   border: 1px solid var(--svg-color);
   border-radius: 4px;
 
-  transition: border-color 250ms var(--timing-function);
-}
-.customer-link {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: border-color 250ms var(--timing-function);
 }
+
 .customer-icon {
   transition: fill 250ms var(--timing-function);
 }

@@ -17,25 +17,25 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
-}
-.team-item-content {
-  padding: 30px 32px;
-}
-.team-item-title {
-  color: var(--title-text-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.188;
-  margin: 0;
+  &-content {
+    padding: 30px 32px;
+  }
+  &-title {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.188;
+    margin: 0;
+  }
+  &-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.188;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
 }
 
-.team-item-description {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.188;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
 .social-list {
   display: flex;
   margin-top: 10px;
@@ -50,6 +50,10 @@
   height: 44px;
   border-radius: 50%;
   transition: background-color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 .social-item:not(:last-child) {
   margin-right: 10px;
@@ -58,18 +62,15 @@
   width: 20px;
   height: 20px;
   transition: fill 250ms var(--timing-function);
+  .social-item > .link:hover &,
+  .social-item > .link:focus & {
+    fill: #ffffff;
+  }
 }
 .icon {
   fill: var(--svg-color);
 }
-.social-item > .link:hover .social-icon,
-.social-item > .link:focus .social-icon {
-  fill: #ffffff;
-}
-.social-item > .link:hover,
-.social-item > .link:focus {
-  background-color: var(--accent-color);
-}
+
 .list.container {
   display: flex;
   justify-content: space-between;

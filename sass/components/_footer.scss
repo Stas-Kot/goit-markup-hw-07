@@ -10,23 +10,27 @@
 .footer {
   background-color: var(--bcg-secondary-color);
   padding: 60px;
-}
-.footer .link {
-  color: var(--footer-text-color);
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  & .link {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  & a[href="https://goo.gl/maps/KZqqGX3hnb8J8rTS9"]
+  {
+    color: var(--title-color);
+  }
+  & > .container {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
-.footer .link:hover,
-.footer .link:focus {
-  color: var(--accent-color);
-}
-.footer a[href="https://goo.gl/maps/KZqqGX3hnb8J8rTS9"]
-{
-  color: var(--title-color);
-}
 address .item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -40,22 +44,18 @@ b {
 .address .list {
   padding-right: 14px;
 }
-.footer > .container {
-  display: flex;
-  align-items: baseline;
-}
+
 .social-media {
   margin-left: 70px;
-}
-.social-media .link {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.social-media .social-icon {
-  fill: var(--title-color);
-}
-.social-media .social-list,
-.subscription-form {
-  margin-top: 20px;
+  & .link {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  & .social-icon {
+    fill: var(--title-color);
+  }
+  & .social-list {
+    margin-top: 20px;
+  }
 }
 
 .subscription {
@@ -64,6 +64,14 @@ b {
 .subscription-form {
   display: flex;
   position: relative;
+  margin-top: 20px;
+  & .button {
+    margin-left: 12px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
 }
 .subscription-input {
   font: inherit;
@@ -77,11 +85,7 @@ b {
   background-color: transparent;
   color: var(--title-color);
 }
-.subscription-input:focus + .subscription-label,
-.subscription-input:not(:placeholder-shown) + .subscription-label {
-  transform: translateY(-35px);
-  background-color: var(--bcg-secondary-color);
-}
+
 .subscription-label {
   position: absolute;
   top: 50%;
@@ -96,13 +100,12 @@ b {
 
   color: var(--footer-text-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.subscription-form .button {
-  margin-left: 12px;
 
-  display: flex;
-  align-items: center;
-  text-align: center;
+  .subscription-input:focus + &,
+  .subscription-input:not(:placeholder-shown) + & {
+    transform: translateY(-35px);
+    background-color: var(--bcg-secondary-color);
+  }
 }
 
 .subscription-icon {

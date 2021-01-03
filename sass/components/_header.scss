@@ -21,13 +21,6 @@
   padding-bottom: 32px;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .link.current,
-.contacts-nav .link:hover,
-.contacts-nav .link:focus {
-  color: var(--accent-color);
-}
 .current {
   position: relative;
 }
@@ -44,10 +37,19 @@
 }
 .site-nav .link {
   color: var(--title-text-color);
+  &:hover,
+  &:focus,
+  &.current {
+    color: var(--accent-color);
+  }
 }
 .contacts-nav .link {
   display: inline-flex;
   color: var(--primary-text-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .contacts-nav .link,
 .site-nav .link,
@@ -68,32 +70,33 @@
 .site-nav {
   display: flex;
   margin-left: 93px;
-}
-.site-nav .item + .item {
-  margin-left: 50px;
+  & .item + .item {
+    margin-left: 50px;
+  }
 }
 
 .contacts-nav {
   display: flex;
   align-items: center;
+  & .item + .item {
+    margin-left: 50px;
+  }
+  &.list > .item {
+    margin-bottom: 0;
+  }
 }
-.contacts-nav .item + .item {
-  margin-left: 50px;
-}
-.contacts-nav.list > .item {
-  margin-bottom: 0;
-}
+
 .link-contact {
   align-items: center;
 }
-.mail-icon,
-.tel-icon {
+.mail-icon {
   width: 16px;
   height: 12px;
   fill: currentColor;
   margin-right: 10px;
 }
 .tel-icon {
+  @extend .mail-icon;
   width: 10px;
   height: 16px;
 }

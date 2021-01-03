@@ -1,11 +1,17 @@
 .features-item {
   width: 270px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 .features-bcg-icon {
   height: 120px;
   background-color: var(--bcg-primary-color);
   margin-bottom: 30px;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .features-icon {
   width: 70px;
@@ -28,12 +34,4 @@
 }
 .features .list {
   display: flex;
-}
-.features-item:not(:last-child) {
-  margin-right: 30px;
-}
-.features-bcg-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
