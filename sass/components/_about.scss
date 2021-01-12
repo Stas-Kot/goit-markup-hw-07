@@ -1,8 +1,6 @@
 .about-title {
   color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.167;
+  @include font(36px, 700, 42px);
   text-align: center;
   margin-top: 0;
   margin-bottom: 50px;
