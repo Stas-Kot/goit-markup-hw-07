@@ -158,10 +158,6 @@ header {
   margin-left: 50px;
 }
 
-.contacts-nav.list > .item {
-  margin-bottom: 0;
-}
-
 .link-contact {
   align-items: center;
 }
@@ -214,7 +210,7 @@ header {
   align-items: baseline;
 }
 
-address .item:not(:last-child) {
+.address .item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -690,7 +686,7 @@ b {
 
 .social-list {
   display: flex;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .social-item > .link {
@@ -726,7 +722,7 @@ b {
   fill: var(--svg-color);
 }
 
-.list.container {
+.list.team {
   display: flex;
   justify-content: space-between;
 }
@@ -763,6 +759,11 @@ b {
 .customer-link:hover .customer-icon,
 .customer-link:focus .customer-icon {
   fill: var(--accent-color);
+}
+
+.customers {
+  display: flex;
+  justify-content: space-between;
 }
 
 .buttons {
