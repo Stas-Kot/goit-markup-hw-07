@@ -394,6 +394,10 @@ b {
   margin-bottom: 28px;
 }
 
+.form-field:nth-child(4) {
+  margin-bottom: 20px;
+}
+
 .form-field:hover {
   cursor: pointer;
 }
@@ -435,6 +439,7 @@ b {
 }
 
 .form-comment {
+  display: block;
   height: 120px;
   resize: none;
   padding: 15px 16px;
@@ -485,6 +490,7 @@ b {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  margin-top: 20px;
 }
 
 .form-policy-text:hover {
@@ -525,7 +531,7 @@ b {
 
 .form-btn {
   width: 200px;
-  margin: 30px auto;
+  margin: 30px auto 0;
 }
 
 .close-btn,
